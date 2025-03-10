@@ -1,0 +1,12 @@
+{
+	"name": "example-snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": 
+					"cpp",
+				"path": "./cpp.json"
+			}
+		]
+	}
+}

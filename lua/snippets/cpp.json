@@ -1,0 +1,62 @@
+{
+  "cpp": {
+  "prefix": "Prac",
+  "body": [
+    "/**",
+    " *   author: long9657",
+    " *  created: $CURRENT_DAY_NAME_SHORT $CURRENT_DATE $CURRENT_MONTH_NAME_SHORT $CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+    "**/",
+    "#include <bits/stdc++.h>",
+    "using namespace std;",
+    "#define ll long long",
+    "#define sz(a) int((a).size())",
+    "#define all(a) (a).begin(), (a).end()",
+    "#define ff first",
+    "#define ss second",
+    "#define pb push_back",
+    "#define mp make_pair",
+    "#define fu(i, a, b) for (int i = (a), _b = (b); i <= _b; ++i)",
+    "#define fd(i, a, b) for (int i = (a), _b = (b); i >= _b; --i)",
+    "#define endl \"\\n\"",
+    "#define name \"\"",
+    "const int N = 2e5 + 7;",
+    "const int BASE = 31;",
+    "const int MOD = 1e9 + 7;",
+    "const ll INF = 2e18 + 7;",
+    "",
+    "void solve() {",
+    "",
+    "}",
+    "",
+    "int main() {",
+    "    ios_base::sync_with_stdio(false);",
+    "    cin.tie(0);",
+    "    cout.tie(0);",
+    "    int t = 1;",
+    "    //cin >> t;",
+    "    for(int i = 1; i <= t; i++) {",
+    "        solve();",
+    "        cout << '\\n';",
+    "    }",
+    "}"
+  ]
+},
+"cpp2": {
+  "prefix": "home",
+  "body": [
+    "/**",
+    " *   author: long9657",
+    " *  created: $CURRENT_DAY_NAME_SHORT $CURRENT_DATE $CURRENT_MONTH_NAME_SHORT $CURRENT_YEAR $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+    "**/",
+    "#include <iostream>",
+    "using namespace std;",
+    "int main() {",
+    "    ios_base::sync_with_stdio(0);",
+    "    cin.tie(0);",
+    "    cout.tie(0);",
+    "}",
+    ""
+  ],
+  "description": "cpp2"
+}
+}

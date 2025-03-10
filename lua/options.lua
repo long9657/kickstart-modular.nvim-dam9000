@@ -41,7 +41,7 @@ vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
-
+vim.opt.termguicolors = true
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -59,6 +59,10 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.incsearch = true
 vim.opt.scrolloff = 10
-
+vim.opt.colorcolumn = '94'
+vim.opt.incsearch = true
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ead84e' })
 -- vim: ts=2 sts=2 sw=2 et
