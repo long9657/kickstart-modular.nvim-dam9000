@@ -84,16 +84,26 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+if vim.g.neovide then
+  -- Put anything you want to happen only in Neovide here
+  vim.o.guifont = 'ComicShannsMono Nerd Font:h14' -- text below applies for VimScript
+  vim.g.neovide_padding_top = 0
+  vim.g.neovide_padding_bottom = 0
+  vim.g.neovide_padding_right = 0
+  vim.g.neovide_padding_left = 0
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_fullscreen = true
+  vim.g.neovide_normal_opacity = 0.8
+end
 -- Set <space> as the leader key
 -- See `:help mapleader`
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
-
 -- [[ Setting options ]]
 require 'options'
 
