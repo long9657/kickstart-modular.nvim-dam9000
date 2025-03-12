@@ -37,7 +37,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/todo-comments',
 
-  -- require 'kickstart/plugins/tokyonight',
+  require 'kickstart/plugins/tokyonight',
 
   require 'kickstart/plugins/mini',
 
