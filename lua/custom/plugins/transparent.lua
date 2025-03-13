@@ -3,6 +3,7 @@ return {
   opts = {
     extra_groups = {
       'NormalFloat',
+      'TelescopeBorder',
     },
     exclude_groups = {
       'CursorLine',
