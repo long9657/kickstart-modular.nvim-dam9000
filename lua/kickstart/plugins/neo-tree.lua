@@ -14,11 +14,10 @@ return {
     { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
-    filesystem = {
-      window = {
-        mappings = {
-          ['O'] = 'open',
-        },
+    window = {
+      mappings = {
+        ['l'] = 'open',
+        ['h'] = 'close_node',
       },
     },
   },

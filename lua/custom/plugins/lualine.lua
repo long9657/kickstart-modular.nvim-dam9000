@@ -3,10 +3,10 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
-      -- theme = 'oceanicnext',
+      theme = 'oceanicnext',
       section_separators = '',
       component_separators = '',
-      disabled_filetypes = { 'NvimTree' },
+      disabled_filetypes = { 'neo-tree' },
     },
     sections = {
       lualine_z = {

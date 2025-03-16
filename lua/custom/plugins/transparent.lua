@@ -12,7 +12,7 @@ return {
   },
   config = function(_, opts)
     require('transparent').setup(opts)
-    require('transparent').clear_prefix 'nvimtree'
+    require('transparent').clear_prefix 'neotree'
     require('transparent').clear_prefix 'lualine'
     require('transparent').clear_prefix 'whichkey'
   end,
