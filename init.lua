@@ -3,7 +3,7 @@ if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.o.guifont = 'ComicShannsMono Nerd Font:h14' -- text below applies for VimScript
   vim.g.neovide_padding_top = 0
-  vim.g.neovide_padding_bottom = 0
+  vim.g.neovide_padding_bottom = -1
   vim.g.neovide_padding_right = 0
   vim.g.neovide_padding_left = 0
   vim.g.neovide_opacity = 0.8
