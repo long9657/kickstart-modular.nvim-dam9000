@@ -7,6 +7,8 @@ if vim.g.neovide then
   vim.g.neovide_padding_right = 0
   vim.g.neovide_padding_left = 0
   vim.g.neovide_fullscreen = true
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_normal_opacity = 0.8
 end
 -- Set <space> as the leader key
 -- See `:help mapleader`
