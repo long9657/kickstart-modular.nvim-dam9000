@@ -3,9 +3,9 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
-      theme = 'oceanicnext',
-      section_separators = '',
-      component_separators = '',
+      theme = 'tokyonight-day',
+      -- section_separators = '',
+      -- component_separators = '',
       disabled_filetypes = { 'neo-tree' },
     },
     sections = {
