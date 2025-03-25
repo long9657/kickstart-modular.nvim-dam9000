@@ -2,7 +2,7 @@
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
-vim.cmd.colorscheme 'tokyonight'
+vim.cmd.colorscheme 'cyberdream'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -63,10 +63,9 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.incsearch = true
 vim.opt.scrolloff = 10
-vim.opt.colorcolumn = '94'
-vim.opt.incsearch = true
+-- vim.opt.incsearch = true
+-- vim.opt.colorcolumn = '94'
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ead84e' })
 
