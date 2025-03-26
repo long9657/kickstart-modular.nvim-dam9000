@@ -12,12 +12,16 @@ return {
         styles = {
           comments = { italic = true }, -- Disable italics in comments
         },
+        on_highlights = function(hl, colors)
+          hl.NeoTreeDimText = { fg = colors.green }
+          hl.NeoTreeMessage = { fg = colors.blue, bg = colors.bg }
+        end,
       }
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      -- vim.cmd.colorscheme 'tokyonight-day'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
 }
