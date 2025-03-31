@@ -62,7 +62,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- vim.opt.scrolloff = 10
 -- vim.opt.incsearch = true
 -- vim.opt.colorcolumn = '94'
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
