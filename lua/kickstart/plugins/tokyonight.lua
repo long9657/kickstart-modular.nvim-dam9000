@@ -15,6 +15,7 @@ return {
         on_highlights = function(hl, colors)
           hl.NeoTreeDimText = { fg = colors.green }
           hl.NeoTreeMessage = { fg = colors.blue, bg = colors.bg }
+          hl.Comment = { fg = colors.teal }
         end,
       }
 
