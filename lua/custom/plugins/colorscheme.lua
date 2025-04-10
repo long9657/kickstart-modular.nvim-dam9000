@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require('cyberdream').setup {
-        transparent = vim.g.transparent_enabled,
+        transparent = not vim.g.neovide,
         italic_comments = true,
         hide_fillchars = true,
         borderless_telescope = true,
