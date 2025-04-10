@@ -5,10 +5,10 @@ return {
       'NormalFloat',
       'TelescopeBorder',
     },
-    -- exclude_groups = {
-    --   'CursorLine',
-    --   'CursorLineNr',
-    -- },
+    exclude_groups = {
+      'CursorLine',
+      'CursorLineNr',
+    },
   },
   config = function(_, opts)
     vim.g.transparent_enabled = not vim.g.neovide
