@@ -8,13 +8,13 @@ return {
       'TelescopeBorder',
       'TelescopeTitle',
       'TelescopeNormal',
-      'NvimTreeNormal',
       'LualineNormal',
+      'Pmenu',
     },
-    -- exclude_groups = {
-    --   'CursorLine',
-    --   'CursorLineNr',
-    -- },
+    exclude_groups = {
+      'CursorLine',
+      'CursorLineNr',
+    },
   },
   config = function(_, opts)
     vim.g.transparent_enabled = true
