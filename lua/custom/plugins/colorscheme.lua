@@ -58,7 +58,7 @@ return {
     config = function()
       require('cyberdream').setup {
         italic_comments = true,
-        hide_fillchars = true,
+        hide_fillchars = false,
         borderless_telescope = true,
         terminal_colors = true,
       } -- Add a custom keybinding to toggle the colorscheme
