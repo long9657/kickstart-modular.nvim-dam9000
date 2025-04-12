@@ -16,6 +16,7 @@ return {
       'NeoTreeTitleBar',
       'NoiceCusror',
       'NoicePopupmenuSelected',
+      'TelescopePreviewMatch',
       -- 'NoiceCmdlinePopup',
     },
   },

@@ -7,9 +7,9 @@ return {
       -- Set default theme
       local themes = {
         -- 'tokyonight-night',
+        'catppuccin',
         'kanagawa',
         'rose-pine',
-        'catppuccin',
         'tender',
         'cyberdream',
       }
