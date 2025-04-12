@@ -14,6 +14,9 @@ return {
       -- 'NeoTreeCursorLine',
       'PmenuSel',
       'NeoTreeTitleBar',
+      'NoiceCusror',
+      'NoicePopupmenuSelected',
+      -- 'NoiceCmdlinePopup',
     },
   },
   config = function(_, opts)
@@ -26,6 +29,9 @@ return {
     require('transparent').clear_prefix 'Tab'
     require('transparent').clear_prefix 'whichkey'
     require('transparent').clear_prefix 'GitSigns'
+    require('transparent').clear_prefix 'Noice'
+    require('transparent').clear_prefix 'DiagnosticSign'
+    -- require('transparent').clear_prefix 'Notify'
     require('transparent').clear_prefix 'Telescope'
   end,
 }
