@@ -1,7 +1,12 @@
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
-  vim.o.guifont = 'Hack Nerd Font:h16' -- text below applies for VimScript
+  vim.api.nvim_create_autocmd('VimEnter', {
+    callback = function()
+      vim.cmd 'cd D:/Code'
+    end,
+  })
+  vim.o.guifont = 'Hack Nerd Font:h14' -- text below applies for VimScript
   vim.g.neovide_padding_top = 0
   vim.g.neovide_padding_bottom = 0
   vim.g.neovide_padding_right = 0
@@ -9,6 +14,12 @@ if vim.g.neovide then
   vim.g.neovide_fullscreen = true
   vim.g.neovide_opacity = 0.8
   vim.g.neovide_normal_opacity = 0.8
+  vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
+  vim.keymap.set('v', '<D-c>', '"+y') -- Copy
+  vim.keymap.set('n', '<D-v>', '"+P') -- Paste normal mode
+  vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
+  vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
+  vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli') -- Paste insert mode
 end
 -- Set <space> as the leader key
 -- See `:help mapleader`
