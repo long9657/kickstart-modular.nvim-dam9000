@@ -6,7 +6,7 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        -- 'tokyonight-night',
+        'tokyonight-night',
         'catppuccin',
         'kanagawa',
         'rose-pine',
@@ -30,26 +30,31 @@ return {
       end, { noremap = true, silent = true })
     end,
   },
+
   {
     'jacoborus/tender.vim',
     name = 'tender',
     priority = 800,
   },
+
   {
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 900,
   },
+
   {
     'rebelot/kanagawa.nvim',
     name = 'kanagawa',
     priority = 910,
   },
+
   {
     'rose-pine/neovim',
     name = 'rose-pine',
     priority = 910,
   },
+
   {
     'scottmckendry/cyberdream.nvim',
     lazy = false,

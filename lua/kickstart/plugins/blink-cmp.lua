@@ -75,12 +75,15 @@ return {
         documentation = {
           window = {
             border = 'rounded',
-            winblend = 0,
+            -- winblend = 0,
           },
-          auto_show = false,
+          auto_show = true,
           auto_show_delay_ms = 500,
         },
-        menu = { border = 'rounded', winblend = 0 },
+        menu = {
+          border = 'rounded',
+          -- winblend = 0
+        },
       },
 
       sources = {
@@ -102,7 +105,13 @@ return {
       fuzzy = { implementation = 'lua' },
 
       -- Shows a signature help window while you type arguments for a function
-      signature = { window = { border = 'rounded', winblend = 0 }, enabled = true },
+      signature = {
+        window = {
+          border = 'rounded',
+          -- winblend = 0
+        },
+        enabled = true,
+      },
     },
   },
 }
