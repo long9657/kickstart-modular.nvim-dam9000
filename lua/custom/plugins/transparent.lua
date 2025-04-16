@@ -12,6 +12,11 @@ return {
       'TelescopePromptBorder',
       'TelescopePreviewTitle',
       'TelescopeResultsTitle',
+      'Pmenu',
+      'BlinkCmpMenu',
+      'BlinkCmpMenuBorder',
+      'BlinkCmpDoc',
+      'BlinkCmpDocBorder',
     },
     exclude_groups = {
       'CursorLine',
@@ -24,7 +29,7 @@ return {
     },
   },
   config = function(_, opts)
-    vim.g.transparent_enabled = not vim.g.neovide
+    vim.g.transparent_enabled = true
     require('transparent').setup(opts)
     require('transparent').clear_prefix 'neotree'
     require('transparent').clear_prefix 'whichkey'
