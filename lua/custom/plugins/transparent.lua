@@ -19,9 +19,9 @@ return {
       'BlinkCmpDocBorder',
     },
     exclude_groups = {
-      'CursorLine',
-      'CursorLineNr',
-      'NeoTreeCursorLine',
+      -- 'CursorLine',
+      -- 'CursorLineNr',
+      -- 'NeoTreeCursorLine',
       'NeoTreeTitleBar',
       'NoiceCusror',
       'NoicePopupmenuSelected',

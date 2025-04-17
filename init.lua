@@ -10,7 +10,7 @@ if vim.g.neovide then
   })
 
   -- Settings
-  vim.o.guifont = 'Hack Nerd Font:h16' -- text below applies for VimScript
+  vim.o.guifont = 'ComicShannsMono Nerd Font:h16' -- text below applies for VimScript
   vim.g.neovide_padding_top = 0
   vim.g.neovide_padding_bottom = 0
   vim.g.neovide_padding_right = 0
