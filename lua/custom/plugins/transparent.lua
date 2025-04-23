@@ -17,6 +17,7 @@ return {
       'BlinkCmpMenuBorder',
       'BlinkCmpDoc',
       'BlinkCmpDocBorder',
+      'DiagnosticVirtualTextHint',
     },
     exclude_groups = {
       -- 'CursorLine',
@@ -42,6 +43,7 @@ return {
   },
   config = function(_, opts)
     require('transparent').setup(opts)
+    vim.keymap.set('n', '<leader>tt', '<cmd>TransparentToggle<cr>', { desc = 'Toggle [t]ransparency' })
     vim.g.transparent_enabled = not vim.g.neovide
   end,
 }

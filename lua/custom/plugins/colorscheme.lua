@@ -6,8 +6,8 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'catppuccin',
         'tokyonight',
+        'catppuccin',
         'kanagawa',
         'rose-pine',
         'tender',
@@ -66,8 +66,7 @@ return {
         hide_fillchars = false,
         borderless_telescope = true,
         terminal_colors = true,
-      } -- Add a custom keybinding to toggle the colorscheme
-      vim.api.nvim_set_keymap('n', '<leader>tt', ':CyberdreamToggleMode<CR>', { noremap = true, silent = true })
+      }
     end,
   },
 }
