@@ -6,12 +6,12 @@ return {
     config = function()
       -- Set default theme
       local themes = {
+        'cyberdream',
         'tokyonight',
         'catppuccin',
         'kanagawa',
         'rose-pine',
         'tender',
-        'cyberdream',
       }
 
       local current_theme_index = 1
@@ -27,7 +27,7 @@ return {
         local theme = themes[current_theme_index]
         vim.cmd.colorscheme(theme)
         print('Change nvim theme to: ' .. theme)
-      end, { noremap = true, silent = true })
+      end, { desc = 'Change Nvim Theme', noremap = true, silent = true })
     end,
   },
 

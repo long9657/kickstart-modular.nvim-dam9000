@@ -61,5 +61,5 @@ vim.keymap.set('n', '<leader>lx', function()
     virtual_text = isLspDiagnosticsVisible,
     underline = isLspDiagnosticsVisible,
   }
-end)
+end, { desc = 'Hide LSP virtual text in Neovim' })
 -- vim: ts=2 sts=2 sw=2 et
