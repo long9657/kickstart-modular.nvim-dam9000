@@ -6,7 +6,7 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'tokyonight',
+        -- 'tokyonight',
         'catppuccin',
         'kanagawa',
         'rose-pine',
@@ -25,6 +25,8 @@ return {
         end
         local theme = themes[current_theme_index]
         vim.cmd.colorscheme(theme)
+        vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
+        vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ead84e' })
         print('Change nvim theme to: ' .. theme)
       end, { desc = 'Change Nvim Theme', noremap = true, silent = true })
     end,
