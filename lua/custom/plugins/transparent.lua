@@ -2,6 +2,9 @@ return {
   'xiyaowong/transparent.nvim',
   opts = {
     extra_groups = {
+      'Winbar',
+      'WinbarNC',
+      'Folded',
       'NormalFloat',
       'FloatBorder',
       'MsgSeparator',
@@ -17,7 +20,7 @@ return {
       'BlinkCmpMenuBorder',
       'BlinkCmpDoc',
       'BlinkCmpDocBorder',
-      'DiagnosticVirtualTextHint',
+      'LspInlayHint',
     },
     exclude_groups = {
       -- 'CursorLine',
@@ -33,7 +36,7 @@ return {
       require('transparent').clear_prefix 'whichkey'
       require('transparent').clear_prefix 'GitSigns'
       require('transparent').clear_prefix 'Noice'
-      require('transparent').clear_prefix 'DiagnosticSign'
+      require('transparent').clear_prefix 'Diagnostic'
       require('transparent').clear_prefix 'Notify'
       require('transparent').clear_prefix 'lualine'
       -- require('transparent').clear_prefix 'Pmenu'

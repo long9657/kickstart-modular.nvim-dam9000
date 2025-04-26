@@ -6,12 +6,11 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'cyberdream',
         'tokyonight',
         'catppuccin',
         'kanagawa',
         'rose-pine',
-        'tender',
+        'cyberdream',
       }
 
       local current_theme_index = 1
@@ -29,12 +28,6 @@ return {
         print('Change nvim theme to: ' .. theme)
       end, { desc = 'Change Nvim Theme', noremap = true, silent = true })
     end,
-  },
-
-  {
-    'jacoborus/tender.vim',
-    name = 'tender',
-    priority = 800,
   },
 
   {
