@@ -68,7 +68,8 @@ vim.opt.incsearch = true
 -- vim.opt.colorcolumn = '94'
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ead84e' })
-
+vim.opt.wrap = true
+vim.opt.linebreak = true
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`

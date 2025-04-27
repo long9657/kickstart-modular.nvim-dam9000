@@ -4,6 +4,36 @@ return {
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+    dependencies = {
+      {
+        'hiphish/rainbow-delimiters.nvim', -- Powered by Tree-sitter
+        submodules = false,
+        opts = {
+          strategy = {
+            [''] = 'rainbow-delimiters.strategy.global',
+            vim = 'rainbow-delimiters.strategy.local',
+          },
+          query = {
+            [''] = 'rainbow-delimiters',
+            lua = 'rainbow-blocks',
+          },
+          priority = {
+            [''] = 110,
+            lua = 210,
+          },
+          highlight = {
+            'RainbowDelimiterRed',
+            'RainbowDelimiterYellow',
+            'RainbowDelimiterBlue',
+            'RainbowDelimiterOrange',
+            'RainbowDelimiterGreen',
+            'RainbowDelimiterViolet',
+            'RainbowDelimiterCyan',
+          },
+        },
+        main = 'rainbow-delimiters.setup', -- Required. Defaults to the repository name if not set.
+      },
+    },
     opts = {
       ensure_installed = { 'bash', 'cpp', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
