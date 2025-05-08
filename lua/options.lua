@@ -61,7 +61,7 @@ vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
-
+vim.opt.cursorlineopt = 'number'
 -- Minimal number of screen lines to keep above and below the cursor.
 -- vim.opt.scrolloff = 10
 vim.opt.incsearch = true

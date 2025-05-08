@@ -23,8 +23,8 @@ return {
       'LspInlayHint',
     },
     exclude_groups = {
-      -- 'CursorLine',
-      -- 'CursorLineNr',
+      'CursorLine',
+      'CursorLineNr',
       -- 'NeoTreeCursorLine',
       'NeoTreeTitleBar',
       'NoiceCusror',

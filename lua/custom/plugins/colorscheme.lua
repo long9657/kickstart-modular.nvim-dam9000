@@ -6,7 +6,7 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        -- 'tokyonight',
+        'tokyonight',
         'catppuccin',
         'kanagawa',
         'rose-pine',
