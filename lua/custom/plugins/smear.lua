@@ -5,7 +5,7 @@ return {
     legacy_computing_symbols_support = true,
     hide_target_hack = false,
     -- Sets animation framerate
-    time_interval = 10, -- milliseconds
+    time_interval = 7, -- milliseconds
     -- Amount of time the cursor has to stay still before triggering animation.
     -- Useful if the target changes and rapidly comes back to its original position.
     -- E.g. when hitting a keybinding that triggers CmdlineEnter.
