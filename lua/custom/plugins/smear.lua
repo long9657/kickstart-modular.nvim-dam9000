@@ -1,6 +1,7 @@
 return {
   'sphamba/smear-cursor.nvim',
-  enabled = not vim.g.neovide,
+  enabled = false,
+  -- enabled = not vim.g.neovide,
   opts = {
     legacy_computing_symbols_support = true,
     hide_target_hack = false,

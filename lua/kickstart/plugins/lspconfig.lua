@@ -19,27 +19,28 @@ return {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', opts = {
-        ui = {
-          border = 'rounded',
+      {
+        'mason-org/mason.nvim',
+        opts = {
+          ui = {
+            border = 'rounded',
+          },
         },
-      } },
+      },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
       {
         'j-hui/fidget.nvim',
-        opts = {},
-        config = function()
-          require('fidget').setup {
-            notification = { -- NOTE: you're missing this outer table
-              window = {
-                winblend = 0, -- NOTE: it's winblend, not blend
-              },
+        opts = {
+          notification = { -- NOTE: you're missing this outer table
+            window = {
+              border = 'rounded',
+              winblend = 0, -- NOTE: it's winblend, not blend
             },
-          }
-        end,
+          },
+        },
       },
 
       -- Allows extra capabilities provided by blink.cmp
@@ -277,7 +278,7 @@ return {
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = false,
+        automatic_enable = false,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}

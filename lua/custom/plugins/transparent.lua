@@ -38,7 +38,7 @@ return {
       require('transparent').clear_prefix 'Noice'
       require('transparent').clear_prefix 'Diagnostic'
       require('transparent').clear_prefix 'Notify'
-      require('transparent').clear_prefix 'lualine'
+      -- require('transparent').clear_prefix 'lualine'
       -- require('transparent').clear_prefix 'Pmenu'
       -- require('transparent').clear_prefix 'Float'
       -- require('transparent').clear_prefix 'Tab'

@@ -7,16 +7,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Run single C++ file
-vim.keymap.set('n', '<leader>rr', function()
-  local filename = vim.fn.expand '%:p'
-  local filebase = vim.fn.fnamemodify(filename, ':t:r')
-
-  local compile_and_run_cmd = string.format(':split | :term g++ -std=c++14 -Wshadow -Wall -o %s %s -g && %s', filebase, filename, filebase)
-
-  vim.cmd(compile_and_run_cmd)
-end, { noremap = true, silent = true, desc = 'runCpp' })
-
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

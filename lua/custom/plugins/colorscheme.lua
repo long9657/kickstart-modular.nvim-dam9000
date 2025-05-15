@@ -11,6 +11,7 @@ return {
         'kanagawa',
         'rose-pine',
         'cyberdream',
+        'fluoromachine',
       }
 
       local current_theme_index = 1
@@ -61,6 +62,21 @@ return {
         hide_fillchars = false,
         borderless_telescope = true,
         terminal_colors = true,
+      }
+    end,
+  },
+  {
+    'maxmx03/fluoromachine.nvim',
+    lazy = false,
+    priority = 1000,
+    name = 'fluoromachine',
+    config = function()
+      local fm = require 'fluoromachine'
+
+      fm.setup {
+        glow = false,
+        theme = 'fluoromachine',
+        transparent = true,
       }
     end,
   },
