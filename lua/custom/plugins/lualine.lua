@@ -3,6 +3,7 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
+      globalstatus = true,
       theme = 'OceanicNext',
       section_separators = '',
       component_separators = '',

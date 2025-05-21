@@ -61,7 +61,7 @@ vim.o.splitbelow = true
 --   and `:help lua-options-guide`
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
+vim.opt.fillchars = { horiz = '━', horizup = '┻', horizdown = '┳', vert = '┃', vertleft = '┫', vertright = '┣', verthoriz = '╋' }
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
@@ -72,7 +72,7 @@ vim.o.cursorlineopt = 'number'
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 vim.o.incsearch = true
--- vim.o.colorcolumn = '94'
+vim.o.colorcolumn = '94'
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ead84e' })
 vim.o.wrap = true
