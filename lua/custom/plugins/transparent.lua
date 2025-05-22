@@ -24,7 +24,7 @@ return {
     },
     exclude_groups = {
       'CursorLine',
-      'CursorLineNr',
+      -- 'CursorLineNr',
       'NoiceCusror',
       'NoicePopupmenuSelected',
       'NoiceCmdlinePopup',

@@ -24,6 +24,13 @@ return {
       command_palette = {
         views = {
           cmdline_popup = {
+            border = {
+              style = 'rounded',
+              padding = { 0, 1 },
+            },
+            win_options = {
+              winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
+            },
             position = {
               row = '50%',
               col = '50%',
@@ -50,7 +57,7 @@ return {
               padding = { 0, 1 },
             },
             win_options = {
-              winhighlight = { Normal = 'Normal', FloatBorder = 'NoiceCmdlinePopupBorder' },
+              winhighlight = { Normal = 'Normal', FloatBorder = 'FloatBorder' },
             },
           },
         },
