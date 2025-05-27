@@ -5,6 +5,7 @@ return {
   opts = {
     -- add any options here
     lsp = {
+      signature = { enabled = false },
       progress = { enabled = false },
 
       -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
