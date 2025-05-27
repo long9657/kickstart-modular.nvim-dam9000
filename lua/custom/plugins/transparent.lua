@@ -1,3 +1,5 @@
+--Some highlight groups may not be defined by the colorscheme so we have to clear it
+--manually"
 return {
   'xiyaowong/transparent.nvim',
   opts = {
@@ -20,7 +22,10 @@ return {
       'BlinkCmpMenuBorder',
       'BlinkCmpDoc',
       'BlinkCmpDocBorder',
+      'BlinkCmpSignatureHelp',
+      'BlinkCmpSignatureHelpBorder',
       'LspInlayHint',
+      'LspSignatureActiveParameter',
     },
     exclude_groups = {
       'CursorLine',
@@ -44,7 +49,9 @@ return {
   },
   config = function(_, opts)
     require('transparent').setup(opts)
-    vim.keymap.set('n', '<leader>tt', '<cmd>TransparentToggle<cr>', { desc = 'Toggle [t]ransparency' })
+    vim.keymap.set('n', '<leader>tt', '<cmd>TransparentToggle<cr>', {
+      desc = 'Toggle [t]ransparency',
+    })
     vim.g.transparent_enabled = not vim.g.neovide
   end,
 }
