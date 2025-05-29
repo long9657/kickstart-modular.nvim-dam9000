@@ -1,4 +1,7 @@
-return { 'lukas-reineke/virt-column.nvim', opts = {
-  char = { '┊' },
-  highlight = { 'WarningMsg' },
-} }
+return {
+  'lukas-reineke/virt-column.nvim',
+  opts = {
+    char = { '┊' },
+    highlight = { 'WarningMsg' },
+  },
+}

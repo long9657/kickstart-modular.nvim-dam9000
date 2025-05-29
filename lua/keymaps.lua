@@ -56,13 +56,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
-vim.api.nvim_create_autocmd('WinScrolled', {
-  callback = function()
-    vim.schedule(function()
-      require('rainbow-delimiters').enable(0)
-    end)
-  end,
-})
 -- Disable ESLint LSP server and hide virtual text in Neovim
 -- Add this to your init.lua or init.vim file
 local isLspDiagnosticsVisible = true
