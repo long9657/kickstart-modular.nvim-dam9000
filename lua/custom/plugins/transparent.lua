@@ -26,6 +26,7 @@ return {
       'BlinkCmpSignatureHelpBorder',
       'LspInlayHint',
       'LspSignatureActiveParameter',
+      'TreesitterContextLineNumber',
     },
     exclude_groups = {
       'CursorLine',
