@@ -9,7 +9,7 @@ return {
       filetype = {
         cpp = {
           'cd $dir &&',
-          'g++ $fileName -o $dir/build/$fileNameWithoutExt &&',
+          'g++ -g $fileName -o $dir/build/$fileNameWithoutExt &&',
           '$dir/build/$fileNameWithoutExt',
         },
       },
