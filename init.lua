@@ -10,15 +10,18 @@ if vim.g.neovide then
   })
 
   -- Settings
-  vim.o.guifont = 'ComicShannsMono Nerd Font:h20' -- text below applies for VimScript
+  vim.o.guifont = 'Inconsolata Nerd Font:h16' -- text below applies for VimScript
   vim.g.neovide_padding_top = 0
   vim.g.neovide_padding_bottom = 0
   vim.g.neovide_padding_right = 0
   vim.g.neovide_padding_left = 0
   vim.g.neovide_fullscreen = true
-  -- vim.g.neovide_window_blurred = true
-  -- vim.g.neovide_opacity = 0.8
-  -- vim.g.neovide_normal_opacity = 0.8
+  vim.g.neovide_floating_shadow = false
+  vim.g.neovide_window_blurred = true
+  vim.g.neovide_opacity = 0.9
+  vim.g.neovide_floating_blur_amount_x = 10
+  vim.g.neovide_floating_blur_amount_y = 10
+  vim.g.neovide_normal_opacity = 0.0
 
   -- Keymaps
   vim.keymap.set('n', '<C-s>', ':w<CR>') -- Save

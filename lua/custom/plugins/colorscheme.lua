@@ -6,9 +6,9 @@ return {
     config = function()
       -- Set default theme
       local themes = {
+        'catppuccin',
         'kanagawa',
         'tokyonight',
-        'catppuccin',
         'rose-pine',
         'cyberdream',
         'fluoromachine',

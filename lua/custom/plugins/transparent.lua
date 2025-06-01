@@ -53,6 +53,6 @@ return {
     vim.keymap.set('n', '<leader>tt', '<cmd>TransparentToggle<cr>', {
       desc = 'Toggle [t]ransparency',
     })
-    vim.g.transparent_enabled = not vim.g.neovide
+    vim.g.transparent_enabled = true
   end,
 }
