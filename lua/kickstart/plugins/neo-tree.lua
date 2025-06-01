@@ -14,6 +14,7 @@ return {
     { '<leader>e', ':Neotree toggle<CR>', desc = 'NeoTree toggle', silent = true },
   },
   opts = {
+    buffers = { follow_current_file = { enabled = true } },
     popup_border_style = 'rounded',
     window = {
       position = 'float',
