@@ -148,10 +148,10 @@ return {
     dap.adapters.cppdbg = {
       id = 'cppdbg',
       type = 'executable',
-      command = vim.fn.stdpath 'data' .. '/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7.exe',
-      options = {
-        detached = false,
-      },
+      command = vim.fn.stdpath 'data' .. '/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
+      -- options = {
+      --   detached = false,
+      -- },
     }
     dap.configurations.cpp = {
       {
