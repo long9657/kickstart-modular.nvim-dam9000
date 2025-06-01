@@ -149,9 +149,9 @@ return {
       id = 'cppdbg',
       type = 'executable',
       command = vim.fn.stdpath 'data' .. '/mason/packages/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
-      -- options = {
-      --   detached = false,
-      -- },
+      options = {
+        detached = vim.fn.has 'win32' == 0,
+      },
     }
     dap.configurations.cpp = {
       {
