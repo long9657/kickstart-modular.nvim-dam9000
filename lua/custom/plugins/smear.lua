@@ -1,19 +1,18 @@
+local terminal = os.getenv 'TERM'
+if terminal == 'xterm-kitty' then
+  return {}
+end
+
 return {
   'sphamba/smear-cursor.nvim',
-  enabled = false,
-  -- enabled = not vim.g.neovide,
-  opts = {
-    legacy_computing_symbols_support = true,
-    hide_target_hack = false,
-    -- Sets animation framerate
+  enabled = not vim.g.neovide,
+  opts = { -- Default  Range
+    stiffness = 0.8, -- 0.6      [0, 1]
+    trailing_stiffness = 0.5, -- 0.4      [0, 1]
+    stiffness_insert_mode = 0.6, -- 0.4      [0, 1]
+    trailing_stiffness_insert_mode = 0.6, -- 0.4      [0, 1]
+    distance_stop_animating = 0.5, -- 0.1      > 0
     time_interval = 7, -- milliseconds
-    -- Amount of time the cursor has to stay still before triggering animation.
-    -- Useful if the target changes and rapidly comes back to its original position.
-    -- E.g. when hitting a keybinding that triggers CmdlineEnter.
-    -- Increase if the cursor makes weird jumps when hitting keys.
-    delay_event_to_smear = 1, -- milliseconds
-
-    -- Delay for `vim.on_key` to avoid redundancy with vim events triggers.
-    delay_after_key = 5, -- milliseconds
+    transparent_bg_fallback_color = '#FFFFFF',
   },
 }
