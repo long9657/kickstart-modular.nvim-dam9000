@@ -107,6 +107,9 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+      vim.keymap.set('n', '<leader>sW', function()
+        builtin.find_files { cwd = '~/.config/wezterm/' }
+      end, { desc = '[S]earch [W]ezterm files' })
     end,
   },
 }
