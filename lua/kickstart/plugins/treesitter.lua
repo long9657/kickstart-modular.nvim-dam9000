@@ -17,6 +17,7 @@ return {
         'query',
         'vim',
         'vimdoc',
+        'python',
       }
       require('nvim-treesitter').install(parser_installed)
       require('nvim-treesitter').update()
