@@ -6,12 +6,9 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'catppuccin',
-        'kanagawa',
-        'tokyonight',
-        'rose-pine',
         'cyberdream',
-        'fluoromachine',
+        'catppuccin',
+        'tokyonight',
       }
 
       local current_theme_index = 1
@@ -41,18 +38,6 @@ return {
   },
 
   {
-    'rebelot/kanagawa.nvim',
-    name = 'kanagawa',
-    priority = 910,
-  },
-
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    priority = 910,
-  },
-
-  {
     'scottmckendry/cyberdream.nvim',
     lazy = false,
     name = 'cyberdream',
@@ -63,21 +48,6 @@ return {
         hide_fillchars = false,
         borderless_telescope = true,
         terminal_colors = true,
-      }
-    end,
-  },
-  {
-    'maxmx03/fluoromachine.nvim',
-    lazy = false,
-    priority = 1000,
-    name = 'fluoromachine',
-    config = function()
-      local fm = require 'fluoromachine'
-
-      fm.setup {
-        glow = false,
-        theme = 'fluoromachine',
-        transparent = true,
       }
     end,
   },
