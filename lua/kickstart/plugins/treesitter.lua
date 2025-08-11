@@ -21,6 +21,8 @@ return {
         'vim',
         'vimdoc',
         'python',
+        'java',
+        'tsx',
       }
       require('nvim-treesitter').install(parser_installed)
       require('nvim-treesitter').update()

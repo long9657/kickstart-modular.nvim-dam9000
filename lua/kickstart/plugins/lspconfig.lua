@@ -29,7 +29,7 @@ return {
       },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-
+      'nvim-java/nvim-java',
       -- Useful status updates for LSP.
       {
         'j-hui/fidget.nvim',
@@ -237,7 +237,7 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
+        ts_ls = {},
         --
 
         lua_ls = {
@@ -254,6 +254,13 @@ return {
             },
           },
         },
+      }
+      require('java').setup {
+        -- Your custom jdtls settings goes here
+      }
+
+      require('lspconfig').jdtls.setup {
+        -- Your custom nvim-java configuration goes here
       }
 
       -- Ensure the servers and tools above are installed
