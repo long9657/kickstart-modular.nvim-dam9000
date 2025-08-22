@@ -6,13 +6,14 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
-
+vim.opt.swapfile = false
 -- Make line numbers default
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 vim.o.relativenumber = true
-
+vim.opt.guicursor =
+  'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
 
