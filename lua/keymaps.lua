@@ -7,10 +7,21 @@ vim.keymap.del('n', '<C-w><C-d>')
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {
   desc = 'Open diagnostic [Q]uickfix list',
 })
+
+--Delete blank lines
+vim.keymap.set('n', '<Leader>wt', [[:g/^$/d<cr>]], { desc = 'Delete blank lines', silent = true })
+
+--Vertical Split New Buffer
+vim.keymap.set('n', '<leader>vn', '<cmd>vnew<cr>', { desc = 'Vertical Split New Buffer', silent = true })
+
+-- Copying buffer paths
+vim.keymap.set('n', '<leader>yr', "<cmd>let @+ = expand('%:~:.')<cr>", { desc = 'Copy Relative Path', silent = true })
+vim.keymap.set('n', '<leader>yf', "<cmd>let @+ = expand('%:p')<cr>", { desc = 'Copy Full Path', silent = true })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
