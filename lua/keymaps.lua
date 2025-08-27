@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {
 })
 
 --Delete blank lines
-vim.keymap.set('n', '<Leader>wt', [[:g/^$/d<cr>]], { desc = 'Delete blank lines', silent = true })
+vim.keymap.set('n', '<Leader>wt', [[:g/^$/d<cr>:noh<CR>]], { desc = 'Delete blank lines', silent = true })
 
 --Vertical Split New Buffer
 vim.keymap.set('n', '<leader>vn', '<cmd>vnew<cr>', { desc = 'Vertical Split New Buffer', silent = true })
