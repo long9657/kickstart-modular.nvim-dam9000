@@ -257,6 +257,13 @@ return {
       }
       require('java').setup {
         -- Your custom jdtls settings goes here
+        jdk = {
+          auto_install = false,
+        },
+        notifications = {
+          -- enable 'Configuring DAP' & 'DAP configured' messages on start up
+          dap = false,
+        },
       }
 
       require('lspconfig').jdtls.setup {
