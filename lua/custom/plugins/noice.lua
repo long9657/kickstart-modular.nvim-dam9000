@@ -80,6 +80,14 @@ return {
         fps = 144,
         background_colour = '#000000',
       },
+      config = function(_, opts)
+        require('notify').setup(opts)
+        require('notify').setup {
+          on_open = function(win)
+            vim.api.nvim_win_set_config(win, { focusable = false })
+          end,
+        }
+      end,
     },
   },
 }
