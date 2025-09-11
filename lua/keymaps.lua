@@ -48,6 +48,15 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('x', '<leader>p', '"_dP')
 
+vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'general save file' })
+vim.keymap.set('n', '<C-c>', '<cmd>%y+<CR>', { desc = 'general copy whole file' })
+vim.keymap.set('i', '<C-b>', '<ESC>^i', { desc = 'move beginning of line' })
+vim.keymap.set('i', '<C-e>', '<End>', { desc = 'move end of line' })
+vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'move left' })
+vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'move right' })
+vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'move down' })
+vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'move up' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
