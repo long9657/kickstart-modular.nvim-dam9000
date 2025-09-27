@@ -339,6 +339,9 @@ return {
         'clang-format',
         'isort',
         'black',
+        'pylint',
+        'eslint_d',
+        'markdownlint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

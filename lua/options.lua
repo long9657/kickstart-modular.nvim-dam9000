@@ -72,11 +72,9 @@ vim.o.cursorlineopt = 'number'
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 vim.o.incsearch = true
-vim.o.colorcolumn = '94'
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'white' })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ead84e' })
 vim.api.nvim_set_hl(0, 'WinSeparator', { link = 'FloatBorder' })
-vim.o.wrap = true
 vim.o.linebreak = true
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -90,9 +88,9 @@ vim.o.confirm = true
 -- })
 
 -- Disable line wrapping
--- vim.o.wrap = false
+vim.o.wrap = false
 
 -- Highlight max chars per line
--- vim.o.colorcolumn = '120'
+vim.o.colorcolumn = '120'
 
 -- vim: ts=2 sts=2 sw=2 et
