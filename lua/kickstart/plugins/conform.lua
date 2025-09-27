@@ -13,6 +13,8 @@ return {
         desc = '[F]ormat buffer',
       },
     },
+    ---@module 'conform'
+    ---@type conform.setupOpts
     opts = {
       notify_on_error = false,
       format_after_save = function(bufnr)
