@@ -7,7 +7,7 @@ return {
       {
         '<leader>f',
         function()
-          require('conform').format { async = true, lsp_format = 'fallback' }
+          require('conform').format { async = true, lsp_format = 'false' }
         end,
         mode = '',
         desc = '[F]ormat buffer',
@@ -25,7 +25,7 @@ return {
         else
           return {
             timeout_ms = 1000,
-            lsp_format = 'fallback',
+            lsp_format = false,
             async = true,
           }
         end
@@ -41,6 +41,8 @@ return {
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         html = { 'prettierd', 'prettier', stop_after_first = true },
         javascriptreact = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        typescript = { 'prettier' },
       },
       formatters = {
         ['clang-format'] = {
