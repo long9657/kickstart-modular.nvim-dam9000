@@ -27,11 +27,16 @@ return {
         ---@module 'mason.settings'
         ---@type MasonSettings
         ---@diagnostic disable-next-line: missing-fields
-        opts = {},
+        opts = {
+          ui = {
+            border = 'rounded',
+          },
+        },
       },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-      'nvim-java/nvim-java',
+      -- 'nvim-java/nvim-java',
+      { 'mfussenegger/nvim-jdtls' },
       -- Useful status updates for LSP.
       {
         'j-hui/fidget.nvim',
@@ -224,9 +229,11 @@ return {
         --
         --  Feel free to add/remove any LSPs here that you want to install via Mason. They will automatically be installed and setup.
         mason = {
-          -- clangd = {},
+          clangd = {},
+          html = {},
+          cssls = {},
           -- gopls = {},
-          -- pyright = {},
+          basedpyright = {},
           -- rust_analyzer = {},
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
           --
@@ -234,7 +241,47 @@ return {
           --    https://github.com/pmizio/typescript-tools.nvim
           --
           -- But for many setups, the LSP (`ts_ls`) will work just fine
-          -- ts_ls = {},
+          ts_ls = {
+            filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'javascriptreact' },
+            cmd = { 'typescript-language-server', '--stdio' },
+            settings = {
+              implicitProjectConfiguration = {
+                checkJs = true,
+              },
+            },
+          },
+
+          tailwindcss = {},
+          jdtls = {
+            settings = {
+              java = {
+                signatureHelp = { enabled = true },
+                extendedClientCapabilities = extendedClientCapabilities,
+                maven = {
+                  downloadSources = true,
+                },
+                referencesCodeLens = {
+                  enabled = true,
+                },
+                references = {
+                  includeDecompiledSources = true,
+                },
+                inlayHints = {
+                  parameterNames = {
+                    enabled = 'all', -- literals, all, none
+                  },
+                },
+                format = {
+                  enabled = false,
+                },
+              },
+            },
+
+            init_options = {
+              bundles = {},
+            },
+          },
+
           --
           lua_ls = {
             -- cmd = { ... },
@@ -257,21 +304,21 @@ return {
           -- dartls = {},
         },
       }
-      require('java').setup {
-        -- Your custom jdtls settings goes here
-        jdk = {
-          auto_install = false,
-        },
-        notifications = {
-          -- enable 'Configuring DAP' & 'DAP configured' messages on start up
-          dap = false,
-        },
-      }
-
-      require('lspconfig').jdtls.setup {
-        -- Your custom nvim-java configuration goes here
-      }
-
+      -- require('java').setup {
+      --   -- Your custom jdtls settings goes here
+      --   jdk = {
+      --     auto_install = false,
+      --   },
+      --   notifications = {
+      --     -- enable 'Configuring DAP' & 'DAP configured' messages on start up
+      --     dap = false,
+      --   },
+      -- }
+      --
+      -- require('lspconfig').jdtls.setup {
+      --   -- Your custom nvim-java configuration goes here
+      -- }
+      --
       -- Ensure the servers and tools above are installed
       --
       -- To check the current status of installed tools and/or manually install
