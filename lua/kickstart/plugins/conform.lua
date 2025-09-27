@@ -6,9 +6,7 @@ return {
     keys = {
       {
         '<leader>f',
-        function()
-          require('conform').format { async = true, lsp_format = 'false' }
-        end,
+        function() require('conform').format { async = true, lsp_format = 'fallback' } end,
         mode = '',
         desc = '[F]ormat buffer',
       },
@@ -27,7 +25,7 @@ return {
         else
           return {
             timeout_ms = 1000,
-            lsp_format = false,
+            lsp_format = 'fallback',
             async = true,
           }
         end
@@ -40,8 +38,8 @@ return {
         python = { 'isort', 'black' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
-        html = { 'prettierd', 'prettier', stop_after_first = true },
+        javascript = { 'prettier' },
+        html = { 'prettier' },
         javascriptreact = { 'prettier' },
         typescriptreact = { 'prettier' },
         typescript = { 'prettier' },
