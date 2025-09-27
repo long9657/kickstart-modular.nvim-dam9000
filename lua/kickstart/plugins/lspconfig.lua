@@ -256,7 +256,6 @@ return {
             settings = {
               java = {
                 signatureHelp = { enabled = true },
-                extendedClientCapabilities = extendedClientCapabilities,
                 maven = {
                   downloadSources = true,
                 },
@@ -272,7 +271,7 @@ return {
                   },
                 },
                 format = {
-                  enabled = false,
+                  enabled = true,
                 },
               },
             },
