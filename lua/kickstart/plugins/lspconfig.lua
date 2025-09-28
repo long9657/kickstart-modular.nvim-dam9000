@@ -171,6 +171,8 @@ return {
           -- This may be unwanted, since they displace some of your code
           if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
             map('<leader>th', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, '[T]oggle Inlay [H]ints')
+
+            vim.lsp.inlay_hint.enable()
           end
         end,
       })
@@ -233,7 +235,24 @@ return {
           html = {},
           cssls = {},
           -- gopls = {},
-          basedpyright = {},
+          basedpyright = {
+            settings = {
+              basedpyright = {
+                analysis = {
+                  typeCheckingMode = 'standard',
+                  diagnosticSeverityOverrides = {
+                    reportAssignmentType = false,
+                    reportArgumentType = 'information',
+                    reportUnusedFunction = 'information',
+                    reportOptionalMemberAccess = 'information',
+                    reportRedeclaration = 'information',
+                    reportImplicitOverride = false,
+                    reportAny = false,
+                  },
+                },
+              },
+            },
+          },
           -- rust_analyzer = {},
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
           --
@@ -281,7 +300,6 @@ return {
             },
           },
 
-          --
           lua_ls = {
             -- cmd = { ... },
             -- filetypes = { ... },
@@ -296,6 +314,20 @@ return {
               },
             },
           },
+          -- require('java').setup {
+          --   -- Your custom jdtls settings goes here
+          --   jdk = {
+          --     auto_install = false,
+          --   },
+          --   notifications = {
+          --     -- enable 'Configuring DAP' & 'DAP configured' messages on start up
+          --     dap = false,
+          --   },
+          -- }
+          --
+          -- require('lspconfig').jdtls.setup {
+          --   -- Your custom nvim-java configuration goes here
+          -- }
         },
         -- This table contains config for all language servers that are *not* installed via Mason.
         -- Structure is identical to the mason table from above.
@@ -303,21 +335,7 @@ return {
           -- dartls = {},
         },
       }
-      -- require('java').setup {
-      --   -- Your custom jdtls settings goes here
-      --   jdk = {
-      --     auto_install = false,
-      --   },
-      --   notifications = {
-      --     -- enable 'Configuring DAP' & 'DAP configured' messages on start up
-      --     dap = false,
-      --   },
-      -- }
-      --
-      -- require('lspconfig').jdtls.setup {
-      --   -- Your custom nvim-java configuration goes here
-      -- }
-      --
+
       -- Ensure the servers and tools above are installed
       --
       -- To check the current status of installed tools and/or manually install
