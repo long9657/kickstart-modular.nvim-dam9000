@@ -6,6 +6,7 @@ return {
     config = function()
       -- Set default theme
       local themes = {
+        'gruvbox',
         'cyberdream',
         'catppuccin',
         'tokyonight',
@@ -36,7 +37,7 @@ return {
     name = 'catppuccin',
     priority = 900,
   },
-
+  { 'ellisonleao/gruvbox.nvim', name = 'gruvbox', priority = 920 },
   {
     'scottmckendry/cyberdream.nvim',
     lazy = false,
