@@ -298,6 +298,14 @@ return {
             init_options = {
               bundles = {},
             },
+            handlers = {
+              ['language/status'] = function(_, result)
+                -- Print or whatever.
+              end,
+              ['$/progress'] = function(_, result, ctx)
+                -- disable progress updates.
+              end,
+            },
           },
 
           lua_ls = {
