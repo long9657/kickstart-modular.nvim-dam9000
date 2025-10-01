@@ -68,9 +68,7 @@ return {
             prompt_title = '[ Walking on the shoulders of TJ ]',
             mappings = {
               default = {
-                after_action = function(selection)
-                  print('Update to (' .. selection.z_score .. ') ' .. selection.path)
-                end,
+                after_action = function(selection) print('Update to (' .. selection.z_score .. ') ' .. selection.path) end,
               },
             },
           },
@@ -94,12 +92,26 @@ return {
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader><leader>', function()
-        builtin.buffers {
-          ignore_current_buffer = true,
-        }
-      end, { desc = '[ ] Find existing buffers' })
-      vim.keymap.set('n', '<leader>sz', require('telescope').extensions.zoxide.list, { desc = '[S]earch [Z]oxide list' })
+      vim.keymap.set(
+        'n',
+        '<leader><leader>',
+        function()
+          builtin.buffers {
+            ignore_current_buffer = true,
+          }
+        end,
+        { desc = '[ ] Find existing buffers' }
+      )
+      if vim.fn.has 'win32' == 1 or vim.fn.has 'win64' == 1 then
+        vim.keymap.set(
+          'n',
+          '<leader>sz',
+          function() require('telescope').extensions.zoxide.list { cmd = { 'pwsh', '-nop', '-c', 'zoxide query -ls' } } end,
+          { desc = '[S]earch [Z]oxide list' }
+        )
+      else
+        vim.keymap.set('n', '<leader>sz', require('telescope').extensions.zoxide.list, { desc = '[S]earch [Z]oxide list' })
+      end
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
@@ -124,12 +136,8 @@ return {
       )
 
       -- Shortcut for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>sn', function()
-        builtin.find_files { cwd = vim.fn.stdpath 'config' }
-      end, { desc = '[S]earch [N]eovim files' })
-      vim.keymap.set('n', '<leader>sW', function()
-        builtin.find_files { cwd = '~/.config/wezterm/' }
-      end, { desc = '[S]earch [W]ezterm files' })
+      vim.keymap.set('n', '<leader>sn', function() builtin.find_files { cwd = vim.fn.stdpath 'config' } end, { desc = '[S]earch [N]eovim files' })
+      vim.keymap.set('n', '<leader>sW', function() builtin.find_files { cwd = '~/.config/wezterm/' } end, { desc = '[S]earch [W]ezterm files' })
     end,
   },
 }
