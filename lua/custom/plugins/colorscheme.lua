@@ -6,10 +6,10 @@ return {
     config = function()
       -- Set default theme
       local themes = {
+        'tokyonight-night',
         'gruvbox',
         'cyberdream',
         'catppuccin',
-        'tokyonight',
       }
 
       local current_theme_index = 1

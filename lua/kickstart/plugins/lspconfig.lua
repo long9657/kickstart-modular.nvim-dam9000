@@ -172,7 +172,7 @@ return {
           if client and (client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) or client.name == 'jdtls') then
             map('<leader>th', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, '[T]oggle Inlay [H]ints')
 
-            vim.lsp.inlay_hint.enable()
+            -- vim.lsp.inlay_hint.enable()
           end
         end,
       })
@@ -231,7 +231,15 @@ return {
         --
         --  Feel free to add/remove any LSPs here that you want to install via Mason. They will automatically be installed and setup.
         mason = {
-          clangd = {},
+          clangd = {
+            InlayHints = {
+              Designators = true,
+              Enabled = true,
+              ParameterNames = true,
+              DeducedTypes = true,
+            },
+            fallbackFlags = { '-std=c++20' },
+          },
           html = {},
           cssls = {},
           -- gopls = {},
@@ -286,7 +294,8 @@ return {
                 },
                 inlayHints = {
                   parameterNames = {
-                    enabled = 'all', -- literals, all, none
+                    enabled = 'all',
+                    exclusions = { 'this' },
                   },
                 },
                 format = {

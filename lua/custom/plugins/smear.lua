@@ -5,7 +5,8 @@ end
 
 return {
   'sphamba/smear-cursor.nvim',
-  enabled = not vim.g.neovide,
+  -- enabled = not vim.g.neovide,
+  enabled = false,
   opts = { -- Default  Range
     stiffness = 0.8, -- 0.6      [0, 1]
     trailing_stiffness = 0.5, -- 0.4      [0, 1]
