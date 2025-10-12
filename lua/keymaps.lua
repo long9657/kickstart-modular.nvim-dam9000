@@ -104,6 +104,13 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end
   end,
 })
+
+-- better up/down
+vim.keymap.set({ 'n', 'x' }, 'j', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true })
+vim.keymap.set({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { desc = 'Down', expr = true })
+vim.keymap.set({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true })
+vim.keymap.set({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true })
+
 -- Disable ESLint LSP server and hide virtual text in Neovim
 -- Add this to your init.lua or init.vim file
 local isLspDiagnosticsVisible = true
