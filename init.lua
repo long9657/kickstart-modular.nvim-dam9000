@@ -2,13 +2,13 @@
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   -- Settings
-  vim.o.guifont = 'Inconsolata Nerd Font Mono:h18' -- text below applies for VimScript
+  vim.o.guifont = 'BlexMono Nerd Font Mono:h18' -- text below applies for VimScript
   vim.g.neovide_fullscreen = true
   vim.g.neovide_window_blurred = true
   vim.g.neovide_opacity = 0.6
   vim.g.neovide_cursor_animate_in_insert_mode = false
-  vim.g.neovide_text_gamma = 0.8
-  vim.g.neovide_text_contrast = 0.1
+  -- vim.g.neovide_text_gamma = 0.8
+  -- vim.g.neovide_text_contrast = 0.1
   -- vim.g.neovide_floating_shadow = false
   -- vim.g.neovide_floating_blur_amount_x = 10
   -- vim.g.neovide_floating_blur_amount_y = 10
@@ -16,16 +16,16 @@ if vim.g.neovide then
 
   -- Tell Neovim which highlight group to use for each mode
   -- Map modes to cursor shapes + highlight groups
-  vim.opt.guicursor = {
-    'n-v-c:block-CursorNormal', -- normal/visual/command → block using CursorNormal
-    'i-ci-ve:ver25-CursorInsert', -- insert/command-insert → vertical bar using CursorInsert
-    'r-cr:hor20-CursorReplace', -- replace modes → underline using CursorReplace
-  }
-
-  -- Now define the colors for those groups
-  vim.api.nvim_set_hl(0, 'CursorNormal', { bg = 'blue', fg = 'white' })
-  vim.api.nvim_set_hl(0, 'CursorInsert', { bg = 'purple', fg = 'black' })
-  vim.api.nvim_set_hl(0, 'CursorReplace', { bg = 'red', fg = 'white' })
+  -- vim.opt.guicursor = {
+  --   'n-v-c:block-CursorNormal', -- normal/visual/command → block using CursorNormal
+  --   'i-ci-ve:ver25-CursorInsert', -- insert/command-insert → vertical bar using CursorInsert
+  --   'r-cr:hor20-CursorReplace', -- replace modes → underline using CursorReplace
+  -- }
+  --
+  -- -- Now define the colors for those groups
+  -- vim.api.nvim_set_hl(0, 'CursorNormal', { bg = 'blue', fg = 'white' })
+  -- vim.api.nvim_set_hl(0, 'CursorInsert', { bg = 'purple', fg = 'black' })
+  -- vim.api.nvim_set_hl(0, 'CursorReplace', { bg = 'red', fg = 'white' })
 
   -- Keymaps
   vim.keymap.set('n', '<C-S-s>', ':w<CR>') -- Save

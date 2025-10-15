@@ -30,7 +30,7 @@ return {
     exclude_groups = {
       'CursorLine',
       -- 'CursorLineNr',
-      'NoiceCusror',
+      'NoiceCursor',
       'NoicePopupmenuSelected',
       'NoiceCmdlinePopup',
     },
