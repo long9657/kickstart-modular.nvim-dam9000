@@ -317,6 +317,12 @@ return {
             },
           },
 
+          eslint = {
+            settings = {
+              -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+              workingDirectories = { mode = 'auto' },
+            },
+          },
           lua_ls = {
             -- cmd = { ... },
             -- filetypes = { ... },
@@ -374,7 +380,6 @@ return {
         'isort',
         'black',
         'pylint',
-        'eslint_d',
         'markdownlint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
