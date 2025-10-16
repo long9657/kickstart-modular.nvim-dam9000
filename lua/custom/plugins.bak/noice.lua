@@ -83,9 +83,7 @@ return {
       config = function(_, opts)
         require('notify').setup(opts)
         require('notify').setup {
-          on_open = function(win)
-            vim.api.nvim_win_set_config(win, { focusable = false })
-          end,
+          on_open = function(win) vim.api.nvim_win_set_config(win, { focusable = false }) end,
         }
       end,
     },
