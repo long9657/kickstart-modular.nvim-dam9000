@@ -121,4 +121,13 @@ vim.keymap.set('n', '<leader>lx', function()
     underline = isLspDiagnosticsVisible,
   }
 end, { desc = 'Hide LSP virtual text in Neovim' })
+
+-- Add undo break-points
+vim.keymap.set('i', ',', ',<c-g>u')
+vim.keymap.set('i', '.', '.<c-g>u')
+vim.keymap.set('i', ';', ';<c-g>u')
+
+-- better indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 -- vim: ts=2 sts=2 sw=2 et
