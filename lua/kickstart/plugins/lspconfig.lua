@@ -308,11 +308,17 @@ return {
               bundles = {},
             },
             handlers = {
-              ['language/status'] = function(_, result)
-                -- Print or whatever.
-              end,
-              ['$/progress'] = function(_, result, ctx)
-                -- disable progress updates.
+              -- filter noisy notifications
+              ['$/progress'] = function(err, result, ctx)
+                local msg = result.value.message
+                if msg and msg:sub(1, 18) == 'Validate documents' then
+                  return
+                end
+                if msg and msg:sub(1, 19) == 'Publish Diagnostics' then
+                  return
+                end
+                -- pass through to normal handler
+                vim.lsp.handlers['$/progress'](err, result, ctx)
               end,
             },
           },
