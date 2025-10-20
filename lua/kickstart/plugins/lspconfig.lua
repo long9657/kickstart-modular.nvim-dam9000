@@ -51,7 +51,8 @@ return {
       },
 
       -- Allows extra capabilities provided by blink.cmp
-      'saghen/blink.cmp',
+      -- 'saghen/blink.cmp',
+      'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
       -- Brief aside: **What is LSP?**
@@ -207,7 +208,8 @@ return {
       -- It has been left here as a comment for educational purposes (as the predecessor completion plugin required this explicit step).
       --
       -- local capabilities = require("blink.cmp").get_lsp_capabilities()
-
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       -- Language servers can broadly be installed in the following ways:
       --  1) via the mason package manager; or
       --  2) via your system's package manager; or
