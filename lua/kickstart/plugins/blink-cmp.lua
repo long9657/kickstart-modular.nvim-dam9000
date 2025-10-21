@@ -85,7 +85,12 @@ return {
         ['<C-k>'] = {},
         ['<C-y>'] = {
           function(cmp)
-            vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<C-g>u', true, true, true), 'n', false)
+            if cmp.snippet_active() then
+              return cmp.accept()
+            end
+            if cmp.is_menu_visible() or vim.fn.pumvisible() == 1 then
+              vim.cmd 'let &undolevels = &undolevels'
+            end
             return cmp.select_and_accept()
           end,
           'fallback',
@@ -104,7 +109,7 @@ return {
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        list = { selection = { preselect = false, auto_insert = false } },
+        list = { selection = { preselect = true, auto_insert = false } },
         documentation = {
           window = {
             border = 'rounded',
