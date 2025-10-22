@@ -130,4 +130,11 @@ vim.keymap.set('i', ';', ';<c-g>u')
 -- better indenting
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
+
+-- Using H/L to go to the begining and the end of line
+-- Note: H will map to _ (the first non-whitespace character of a line)
+-- It would be helpful if it is a indent line in some languages like Python, Ruby, YAML, ...
+vim.keymap.set('n', 'gs', '_', { noremap = true, silent = true })
+vim.keymap.set('n', 'gl', '$', { noremap = true, silent = true })
+
 -- vim: ts=2 sts=2 sw=2 et
