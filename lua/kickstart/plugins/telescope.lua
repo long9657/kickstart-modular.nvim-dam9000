@@ -28,7 +28,6 @@ return {
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
-      local z_utils = require 'telescope._extensions.zoxide.utils'
       -- Telescope is a fuzzy finder that comes with a lot of different things that
       -- it can fuzzy find! It's more than just a "file finder", it can search
       -- many different aspects of Neovim, your workspace, LSP, and more!
@@ -60,6 +59,13 @@ return {
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          sorting_strategy = 'ascending',
+          layout_config = {
+            horizontal = { prompt_position = 'top' },
+          },
+        },
+
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
