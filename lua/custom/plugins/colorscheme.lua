@@ -6,10 +6,11 @@ return {
     config = function()
       -- Set default theme
       local themes = {
+        'solarized-osaka',
+        'catppuccin',
         'tokyonight-night',
         'gruvbox',
         'cyberdream',
-        'catppuccin',
       }
 
       local current_theme_index = 1
@@ -51,5 +52,12 @@ return {
         terminal_colors = true,
       }
     end,
+  },
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = false,
+    priority = 1000,
+    name = 'solarized-osaka',
+    opts = {},
   },
 }

@@ -38,18 +38,18 @@ return {
       -- 'nvim-java/nvim-java',
       { 'mfussenegger/nvim-jdtls' },
       -- Useful status updates for LSP.
-      {
-        'j-hui/fidget.nvim',
-        opts = {
-          notification = { -- NOTE: you're missing this outer table
-            window = {
-              align = 'top',
-              border = 'rounded',
-              winblend = 0, -- NOTE: it's winblend, not blend
-            },
-          },
-        },
-      },
+      -- {
+      --   'j-hui/fidget.nvim',
+      --   opts = {
+      --     notification = { -- NOTE: you're missing this outer table
+      --       window = {
+      --         align = 'top',
+      --         border = 'rounded',
+      --         winblend = 0, -- NOTE: it's winblend, not blend
+      --       },
+      --     },
+      --   },
+      -- },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
