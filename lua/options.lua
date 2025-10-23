@@ -94,4 +94,8 @@ vim.o.wrap = true
 -- Highlight max chars per line
 vim.o.colorcolumn = '94'
 
+-- Undercurl
+vim.cmd [[let &t_Cs = "\e[4:3m"]]
+vim.cmd [[let &t_Ce = "\e[4:0m"]]
+
 -- vim: ts=2 sts=2 sw=2 et
