@@ -20,7 +20,7 @@ return {
     ---@type wk.Opts
     ---@diagnostic disable-next-line: missing-fields
     opts = {
-      preset = 'modern',
+      preset = 'helix',
       -- delay between pressing a key and opening which-key (milliseconds)
       -- this setting is independent of vim.o.timeoutlen
       delay = 0,

@@ -43,6 +43,7 @@ return {
         opts = {
           notification = { -- NOTE: you're missing this outer table
             window = {
+              align = 'top',
               border = 'rounded',
               winblend = 0, -- NOTE: it's winblend, not blend
             },
