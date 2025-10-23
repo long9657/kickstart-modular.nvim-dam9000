@@ -26,6 +26,7 @@ return {
       'BlinkCmpSignatureHelpBorder',
       'LspInlayHint',
       'LspSignatureActiveParameter',
+      'SnacksPickerBorder',
     },
     exclude_groups = {
       'CursorLine',

@@ -6,8 +6,8 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'solarized-osaka',
         'catppuccin',
+        'solarized-osaka',
         'tokyonight-night',
         'gruvbox',
         'cyberdream',
@@ -37,6 +37,9 @@ return {
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 900,
+    opts = {
+      auto_intergrations = true,
+    },
   },
   { 'ellisonleao/gruvbox.nvim', name = 'gruvbox', priority = 920 },
   {
