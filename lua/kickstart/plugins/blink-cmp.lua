@@ -1,7 +1,7 @@
 return {
   { -- Autocompletion
     'saghen/blink.cmp',
-    event = 'InsertEnter',
+    event = 'VimEnter',
     version = '1.*',
     dependencies = {
       -- Snippet Engine
@@ -107,6 +107,9 @@ return {
       },
 
       completion = {
+        ghost_text = {
+          enabled = true,
+        },
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         list = { selection = { preselect = true, auto_insert = false } },
