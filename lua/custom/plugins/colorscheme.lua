@@ -6,9 +6,10 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'solarized-osaka',
-        'catppuccin',
         'tokyonight-night',
+        'shades_of_purple',
+        'catppuccin',
+        'solarized-osaka',
         'gruvbox',
         'cyberdream',
       }
@@ -32,7 +33,11 @@ return {
       end, { desc = 'Change Nvim Theme', noremap = true, silent = true })
     end,
   },
-
+  {
+    'Rigellute/shades-of-purple.vim',
+    name = 'shades_of_purple',
+    priority = 900,
+  },
   {
     'catppuccin/nvim',
     name = 'catppuccin',

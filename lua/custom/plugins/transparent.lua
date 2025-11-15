@@ -39,7 +39,7 @@ return {
       require('transparent').clear_prefix 'whichkey'
       require('transparent').clear_prefix 'GitSigns'
       require('transparent').clear_prefix 'Noice'
-      -- require('transparent').clear_prefix 'Diagnostic'
+      require('transparent').clear_prefix 'Diagnostic'
       require('transparent').clear_prefix 'Notify'
       require('transparent').clear_prefix 'lualine'
       require('transparent').clear_prefix 'TreesitterContext'

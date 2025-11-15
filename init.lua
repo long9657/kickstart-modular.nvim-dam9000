@@ -2,7 +2,7 @@
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   -- Settings
-  vim.o.guifont = 'BlexMono Nerd Font Mono:h18' -- text below applies for VimScript
+  vim.o.guifont = 'Comic Code:h16' -- text below applies for VimScript
   vim.g.neovide_fullscreen = true
   vim.g.neovide_window_blurred = true
   vim.g.neovide_opacity = 0.6
