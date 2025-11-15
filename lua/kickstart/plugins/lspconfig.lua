@@ -38,18 +38,18 @@ return {
       -- 'nvim-java/nvim-java',
       { 'mfussenegger/nvim-jdtls' },
       -- Useful status updates for LSP.
-      -- {
-      --   'j-hui/fidget.nvim',
-      --   opts = {
-      --     notification = { -- NOTE: you're missing this outer table
-      --       window = {
-      --         align = 'top',
-      --         border = 'rounded',
-      --         winblend = 0, -- NOTE: it's winblend, not blend
-      --       },
-      --     },
-      --   },
-      -- },
+      {
+        'j-hui/fidget.nvim',
+        opts = {
+          notification = { -- NOTE: you're missing this outer table
+            window = {
+              align = 'top',
+              border = 'rounded',
+              winblend = 0, -- NOTE: it's winblend, not blend
+            },
+          },
+        },
+      },
 
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
@@ -192,6 +192,7 @@ return {
           },
         } or {},
         virtual_text = {
+          current_line = true,
           source = 'if_many',
           spacing = 2,
         },
@@ -388,6 +389,7 @@ return {
         'black',
         'pylint',
         'markdownlint',
+        'google-java-format',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

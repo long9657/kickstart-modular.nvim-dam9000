@@ -33,6 +33,7 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 
 -- Close current buffer
 vim.keymap.set('n', '<leader>Q', ':bd<CR>', { desc = 'Close current buffer' })
+vim.keymap.set('n', '<leader>xe', '<cmd>%bd|e#<cr>', { desc = 'Close all buffer but current' })
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
