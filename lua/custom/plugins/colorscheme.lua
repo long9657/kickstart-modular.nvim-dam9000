@@ -13,8 +13,8 @@ return {
         'gruvbox',
         'cyberdream',
       }
-
-      local current_theme_index = 1
+      math.randomseed(vim.loop.now())
+      local current_theme_index = math.random(#themes)
       -- Set default theme (first theme)
       vim.cmd.colorscheme(themes[current_theme_index])
 
