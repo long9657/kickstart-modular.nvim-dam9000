@@ -6,15 +6,12 @@ return {
     config = function()
       -- Set default theme
       local themes = {
-        'tokyonight-night',
-        'shades_of_purple',
-        'catppuccin',
         'solarized-osaka',
-        'gruvbox',
+        'tokyonight-night',
+        'catppuccin',
         'cyberdream',
       }
-      math.randomseed(vim.loop.now())
-      local current_theme_index = math.random(#themes)
+      local current_theme_index = 1
       -- Set default theme (first theme)
       vim.cmd.colorscheme(themes[current_theme_index])
 
@@ -34,16 +31,10 @@ return {
     end,
   },
   {
-    'Rigellute/shades-of-purple.vim',
-    name = 'shades_of_purple',
-    priority = 900,
-  },
-  {
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 900,
   },
-  { 'ellisonleao/gruvbox.nvim', name = 'gruvbox', priority = 920 },
   {
     'scottmckendry/cyberdream.nvim',
     lazy = false,

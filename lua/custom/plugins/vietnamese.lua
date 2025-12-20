@@ -1,4 +1,7 @@
 return {
-          "sontungexpt/vietnamese.nvim",
-          opts = {}
-        }
+  'sontungexpt/vietnamese.nvim',
+  opts = {
+    enabled = false,
+  },
+}
+
