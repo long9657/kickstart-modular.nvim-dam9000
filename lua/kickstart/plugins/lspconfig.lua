@@ -192,7 +192,7 @@ return {
           },
         } or {},
         virtual_text = {
-          current_line = true,
+          -- current_line = true,
           source = 'if_many',
           spacing = 2,
         },
